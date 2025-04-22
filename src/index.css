@@ -1,3 +1,139 @@
-h1 {
-    color: red;
+body {
+  background: #1f1f1f;
+  color: #fff;
+}
+
+.controls {
+  width: 100%;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+select,button {
+  padding: 8px 12px;
+  margin: 5px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.clocks-container {
+  display: grid;
+  grid-template-columns: auto auto auto;  
+  gap: 200px;
+  justify-content: center;
+  width: 100%;
+}
+
+.watch {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  background: #6a0dad;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.display {
+  background: #FBE106;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+}
+
+.blink {
+  animation: blink 1s steps(1) infinite;
+}
+
+.light-mode {
+  background-color: #FFFFFF;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+button {
+  position: absolute;
+  background-color: gold;
+  border-radius: 8px;
+  font-size: 14px;
+  z-index: 10;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+.format {
+  top: 50%;
+  right: auto;
+  transform: translateY(-50%);
+  background-color: #2ee59d;
+}
+
+.remove {
+  top: 50%;
+  left: -39px;
+  transform: translateY(-50%);
+  background-color: #ff5252;
+  color: white;
+}
+
+.watch button.mode {
+  top: 12px;
+  right: 40px;
+  background: #FBE106;
+}
+
+.watch button.reset {
+  top: 12px;
+  left: 40px;
+  background: #2EE59D;
+  color: white;
+}
+
+.watch button.light {
+  bottom: 12px;
+  left: 40px;
+  background: #FBE106;
+}
+
+.watch button.increase {
+  bottom: 12px;
+  right: 40px;
+  background: #FBE106;
+}
+.watch button.format {
+  position: absolute;
+  top: 50%;
+  right: -100px;
+  background: #2EE59D;
+  color: #fff;
+  border: none;
+}
+
+.watch button.remove {
+  top: 0%;
+  right: 207px;
+  transform: translateY(-50%);
+  color: #fff;
+  padding: 5px;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.is24h {
+  font-size: 12px;
 }

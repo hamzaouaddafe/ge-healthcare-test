@@ -2,12 +2,33 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-    <!-- support for mobile touch devices -->
-    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+  <meta charset="utf-8">
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+  <!-- support for mobile touch devices -->
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+
 </head>
+
 <body>
-    <h1>Empty Page</h1>
+  <div class="controls">
+    <select id="timezoneSelect">
+      <option value="0">GMT+0</option>
+      <option value="1">GMT+1</option>
+      <option value="2">GMT+2</option>
+    </select>
+    <select id="clockTypeSelect">
+      <option value="digital">Digital</option>
+      <option value="analog">Analog</option>
+    </select>
+    <button id="addNewClockBtn">Add Clock</button>
+  </div>
+
+  <div class="clocks-container" id="clocksContainer">
+
+  </div>
+  <script type="module" src="./index.ts"></script>
 </body>
+
 </html>
