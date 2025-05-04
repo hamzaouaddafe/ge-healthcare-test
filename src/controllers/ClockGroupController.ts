@@ -30,16 +30,6 @@ export class ClockGroupController {
         this.container.appendChild(el)
 
         const model = new ClockModel(offset)
-        /*  const view = new ClockView(el)
-          const controller = new ClockController(model, view, () => {
-              el.remove()
-              this.clockModels = this.clockModels.filter(m => m !== model)
-          })
-  
-          view.renderTime(model.getTime().hours, model.getTime().minutes, model.getTime().seconds, model.getFormat())
-  
-          this.clockModels.push(model)
-          this.controllers.push(controller)*/
 
         let controller;
         let view;

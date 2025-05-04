@@ -7,7 +7,6 @@ export enum EditMode {
 type TickCallback = (hours: number, minutes: number, seconds: number) => void;
 type ModeChangeCallback = (mode: EditMode) => void;
 type FormatCallback = (is24h: boolean) => void;
-type VoidCallBack = () => void;
 
 export class ClockModel {
   private offset: number
@@ -59,10 +58,6 @@ export class ClockModel {
     };
   }
 
-  getMode(): EditMode {
-    return this.editMode;
-  }
-
   cycleEditMode(): void {
     if (this.editMode === EditMode.NONE) {
       this.editMode = EditMode.HOURS;
@@ -103,8 +98,4 @@ export class ClockModel {
   public getFormat() {
     return this.is24h
   }
-  public getEditMode() {
-    return this.editMode
-  }
-
 }
